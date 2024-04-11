@@ -1,5 +1,5 @@
 export default async (req, context) => {
     return new Response(
-        { key: process.env.API_KEY }
+        JSON.stringify({ key: process.env.API_KEY })
     );
   };
