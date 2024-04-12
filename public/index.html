@@ -9,22 +9,39 @@
     <link rel="icon" href="./favicon.png" type="image/x-icon">
   </head>
   <body>
+    <header class="header">
+      <div class="header-container">
+        <h1 class="title">Welcome to <span class="accent">low-carb</span> diet helper</h1>
+        <section class="subheading">Powered by Gemini AI.</section>
+      </div>        
+    </header>
     <main class="container">
-        <h1 class="heading">Welcome to low-carb diet helper</h1>
-        <p>Powered by Gemini AI.</p>
+
         <form id="low-carb-test-form">
-            <label for="product-name" class="label">Input the product you want to test for suitability</label>
-            <input required type="text" id="product-name" class="input" name="productName" placeholder="Input your product here..."/>
+            <label for="product-name" class="label">Product name</label>
+            <div class="input-container">
+              <input required type="text" id="product-name" class="input" name="productName" placeholder="Input your product here..."/>
+              <button type="button" id="clear-button">X</button>
+            </div>
+
             <button type="submit" class="button">Works for low carb?</button>
         </form>
 
         <div id="result">
           <div id="result-content"></div>
           <div id="loader">
-            <span class="skeleton-box" style="width:80%;"></span>
             <span class="skeleton-box" style="width:90%;"></span>
-            <span class="skeleton-box" style="width:83%;"></span>
+            <span class="skeleton-box" style="width:70%;"></span>
+            <span class="skeleton-box" style="width:55%;"></span>
+            <span class="skeleton-box" style="width:65%;"></span>
+            <span class="skeleton-box" style="width:85%;"></span>
+            <span class="skeleton-box" style="width:95%;"></span>
+            <span class="skeleton-box" style="width:75%;"></span>
             <span class="skeleton-box" style="width:80%;"></span>
+            <span class="skeleton-box" style="width:65%;"></span>
+            <span class="skeleton-box" style="width:75%;"></span>
+            <span class="skeleton-box" style="width:90%;"></span>
+            <span class="skeleton-box" style="width:70%;"></span>
         </div>
       </div>
     </main>

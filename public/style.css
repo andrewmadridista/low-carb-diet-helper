@@ -1,29 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
-.container {
-    max-width: 1024px;
+:root {
+    --primary: #192f01;
+    --secondary: #ded369;
+    --tertiary: #f8efea;
+    --accent: #e0475b;
+    --max-content-width: 768px;
+    --space-main: 16px;
+    --space-small: 8px;
+    --space-large: 20px;
+    --space-xl: 32px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.header {
+    height: 80px;
+    background-color: var(--tertiary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: var(--max-content-width);
+    padding: 0;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 var(--space-main);
+    height: 100%;
+}
+
+
+.title {
+    margin: 0;
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.subheading {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: var(--space-small);
+}
+
+.container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: var(--space-main);
 }
 
 #result {
-    margin-top: 20px;
+    margin-top: var(--space-xl);
+    border-top: 2px dashed var(--primary);;
+    padding-top: var(--space-main);
+    font-size: 20px;
 }
 
 #loader {
-    margin-top: 20px;
+    margin-top: var(--space-main);
     display: none;
 }
 
 .skeleton-box {
     display: inline-block;
-    height: 20px;
+    height: var(--space-large);
     position: relative;
     overflow: hidden;
-    background-color: #DDDBDD;
-    margin: 4px 0;
+    background-color: var(--primary);
+    margin-bottom: var(--space-small);
   }
 
   @keyframes shimmer {
@@ -45,36 +109,75 @@
   }
 
   #low-carb-test-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 768px;
+  }
+
+  .label {
+    font-size: 12px;
   }
 
   .input {
     margin-top: 10px;
     display: block;
     width: 100%;
-    max-width: 768px;
+    min-width: auto;
     padding: 10px 20px;
     margin-bottom: 20px;
-    border: 2px solid lightgray;
+    border: none;
+    border-bottom: 2px solid transparent;
     border-radius: 4px;
+    background-color: var(--tertiary);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .input:focus {
+    outline: none;
+    border-bottom-color: var(--primary);
+  }
+
+  .input-container {
+    position: relative;
+  }
+
+  #clear-button {
+    position: absolute;
+    right: 4px;
+    top: 2px;
+    color: var(--primary);
+    display: block;
+    padding: 8px;
+    border-radius: 2px;
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    font-weight: 800;
+  }
+
+  #clear-button:hover, #clear-button:active {
+    cursor: pointer;
+    color: var(--accent);
   }
 
   .button {
+    margin-top: var(--space-xl);
     padding: 10px 20px;
     font-weight: bold;
     font-size: 16px;
-    border: 2px solid gray;
-    opacity: .6;
+    border: 2px solid var(--tertiary);
     color: black;
     display: block;
     border-radius: 4px;
-    background-color: white;
+    background-color: var(--primary);
+    color: var(--tertiary);
+    width: 100%;
   }
+
   .button:hover {
     opacity: 1;
     cursor: pointer;
-    border-style: solid;
+    color: var(--accent);
+    border-color: var(--primary);
   }
 

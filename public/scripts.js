@@ -11,13 +11,12 @@ async function getApiKey() {
         return data.key;
     } catch (error) {
         console.error(error);
-        return nulls;
+        return null;
     }
 }
 
 function renderResponseText(text) {
-    const previousContent = document.getElementById("result-content");
-    previousContent.remove();
+
 
     const normalizedText = text.replace("**", "");
     const textChunks = normalizedText.split("*");
@@ -36,6 +35,9 @@ function renderResponseText(text) {
 function renderLoader() {
     const loaderElement = document.getElementById("loader");
     loaderElement.style.display = "block";
+
+    const previousContent = document.getElementById("result-content");
+    previousContent.remove();
 }
 
 function removeLoader() {
@@ -57,8 +59,9 @@ async function onStartGeneration(event) {
     const model = getAI.getGenerativeModel({ model: "gemini-pro" });
 
     const prompt = `Is ${inputValue} suitable for the low carb diet product?
-     What's a carb content of a typical portion? Please keep your output breef - up to 100 words.
-      Do a short explanation in which case the ${inputValue} is suitable. Reply in the conversational manner.`
+     What's a carb content of a typical portion? Please keep your output breef - up to 150 words.
+      Do a short explanation in which case the ${inputValue} is suitable. Recommend alternatives if it is not suitable.
+    Reply in the conversational manner.`
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
@@ -66,6 +69,14 @@ async function onStartGeneration(event) {
 
     removeLoader();
     renderResponseText(text);
+}
+
+function onClearButtonClick() {
+    const inputElement = document.getElementById("product-name");
+
+    inputElement.value = "";
+
+    inputElement.focus();
 }
 
 async function onDocumentLoad() {
@@ -77,4 +88,7 @@ async function onDocumentLoad() {
 
     formElement.addEventListener("submit", onStartGeneration);
 
+    const clearButton = document.getElementById("clear-button");
+
+    clearButton.addEventListener("click", onClearButtonClick);
 }
