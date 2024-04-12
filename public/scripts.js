@@ -16,8 +16,6 @@ async function getApiKey() {
 }
 
 function renderResponseText(text) {
-
-
     const normalizedText = text.replace("**", "");
     const textChunks = normalizedText.split("*");
 

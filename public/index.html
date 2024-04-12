@@ -11,40 +11,47 @@
   <body>
     <header class="header">
       <div class="header-container">
-        <h1 class="title">Welcome to <span class="accent">low-carb</span> diet helper</h1>
+        <h1 class="title"><span class="accent">Low-carb</span> diet helper</h1>
         <section class="subheading">Powered by Gemini AI.</section>
       </div>        
     </header>
-    <main class="container">
-
-        <form id="low-carb-test-form">
-            <label for="product-name" class="label">Product name</label>
+    <main>
+      <section class="form-section">
+        <div class="container">
+          <form id="low-carb-test-form">
+            <label for="product-name" class="label">Product name:</label>
             <div class="input-container">
               <input required type="text" id="product-name" class="input" name="productName" placeholder="Input your product here..."/>
               <button type="button" id="clear-button">X</button>
             </div>
-
             <button type="submit" class="button">Works for low carb?</button>
-        </form>
-
-        <div id="result">
+          </form>
+        </div>
+        </div>
+      </section>
+      <section class="result-section">
+        <div class="container" id="result">
           <div id="result-content"></div>
           <div id="loader">
-            <span class="skeleton-box" style="width:90%;"></span>
-            <span class="skeleton-box" style="width:70%;"></span>
-            <span class="skeleton-box" style="width:55%;"></span>
-            <span class="skeleton-box" style="width:65%;"></span>
-            <span class="skeleton-box" style="width:85%;"></span>
-            <span class="skeleton-box" style="width:95%;"></span>
-            <span class="skeleton-box" style="width:75%;"></span>
-            <span class="skeleton-box" style="width:80%;"></span>
-            <span class="skeleton-box" style="width:65%;"></span>
-            <span class="skeleton-box" style="width:75%;"></span>
-            <span class="skeleton-box" style="width:90%;"></span>
-            <span class="skeleton-box" style="width:70%;"></span>
+            <div class="skeleton-box" style="width:90%;"></div>
+            <div class="skeleton-box" style="width:70%;"></div>
+            <div class="skeleton-box" style="width:55%;"></div>
+            <div class="skeleton-box" style="width:65%;"></div>
+            <div class="skeleton-box" style="width:85%;"></div>
+            <div class="skeleton-box" style="width:95%;"></div>
+            <div class="skeleton-box" style="width:75%;"></div>
+            <div class="skeleton-box" style="width:80%;"></div>
+            <div class="skeleton-box" style="width:65%;"></div>
+            <div class="skeleton-box" style="width:75%;"></div>
+            <div class="skeleton-box" style="width:90%;"></div>
+            <div class="skeleton-box" style="width:70%;"></div>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
+
+
+
     <script type="importmap">
       {
         "imports": {

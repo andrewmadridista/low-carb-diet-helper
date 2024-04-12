@@ -19,7 +19,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--secondary);
+    background-color: var(--tertiary);
     color: var(--primary);
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -29,6 +29,7 @@ body {
 
 .accent {
     color: var(--accent);
+    font-style: italic;
 }
 
 .header {
@@ -59,8 +60,9 @@ body {
 .subheading {
     color: var(--accent);
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 400;
     margin-top: var(--space-small);
+    font-style: italic;
 }
 
 .container {
@@ -69,11 +71,16 @@ body {
     padding: var(--space-main);
 }
 
-#result {
-    margin-top: var(--space-xl);
-    border-top: 2px dashed var(--primary);;
-    padding-top: var(--space-main);
+.form-section {
+    background-color: var(--secondary);
+    padding: var(--space-xl) 0;
+}
+
+.result-section {
+    border-top: 2px solid var(--primary);;
     font-size: 20px;
+    line-height: 1.5;
+    background-color: var(--tertiary);
 }
 
 #loader {
@@ -87,7 +94,8 @@ body {
     position: relative;
     overflow: hidden;
     background-color: var(--primary);
-    margin-bottom: var(--space-small);
+    margin-bottom: 2px;
+    border-radius: 4px;
   }
 
   @keyframes shimmer {
@@ -113,7 +121,8 @@ body {
   }
 
   .label {
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: 600;
   }
 
   .input {
@@ -143,16 +152,17 @@ body {
 
   #clear-button {
     position: absolute;
-    right: 4px;
-    top: 2px;
+    right: 0;
+    top: 0px;
     color: var(--primary);
     display: block;
-    padding: 8px;
-    border-radius: 2px;
+    padding: 8px 12px;
     border: none;
-    font-size: 16px;
+    font-size: 24px;
     background-color: transparent;
     font-weight: 800;
+    line-height: 1;
+    border-left: 1px solid var(--primary);
   }
 
   #clear-button:hover, #clear-button:active {
